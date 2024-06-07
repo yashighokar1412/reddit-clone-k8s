@@ -38,7 +38,7 @@ resource "aws_eks_cluster" "example" {
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
-    subnet_ids = [
+    subnet_ids = 
      "subnet-0115cf0cf6d7d4105",
      "subnet-0052f6b041496a448",
 
@@ -85,7 +85,7 @@ resource "aws_eks_node_group" "example" {
   cluster_name    = aws_eks_cluster.example.name
   node_group_name = "Node-cloud"
   node_role_arn   = aws_iam_role.example1.arn
-  subnet_ids      = [
+  subnet_ids      = 
     "subnet-0115cf0cf6d7d4105", # Ensure this subnet is in a supported AZ
     "subnet-0052f6b041496a448",
 
